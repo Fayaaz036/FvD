@@ -5,8 +5,7 @@
 /*********/
 @font-face {
 	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
+	src: url('../fonts/RubrikBold 400.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
 
@@ -55,3 +54,40 @@ body {
 
 /* jouw code */
 
+body {
+	height :100dvh;
+	display: grid;
+	place-content:center;
+}
+
+h1 {
+	font-size:6em;
+	position:relative;
+}
+
+h1::before {
+
+}
+
+
+h1, span {
+	color:#f9d839;
+	display:inline-block;
+	position:relative;
+
+}
+
+span::after {
+	content:"";
+	position:absolute;
+	background-color:red;
+
+	clip-path: polygon(76% 0, 100% 0, 100% 35%, 56% 35%);
+	height:.5em;
+	width: 1em;
+	left:-.65em;
+	top:0.15em
+
+
+
+}
