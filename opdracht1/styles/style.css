@@ -70,24 +70,83 @@ h1::before {
 }
 
 
-h1, span {
+h1,
+span {
 	color:#f9d839;
 	display:inline-block;
 	position:relative;
-
 }
 
 span::after {
 	content:"";
 	position:absolute;
 	background-color:red;
-
 	clip-path: polygon(76% 0, 100% 0, 100% 35%, 56% 35%);
 	height:.5em;
 	width: 1em;
 	left:-.65em;
-	top:0.15em
+	top:0.16em;
 
 
+}
 
+h1:hover span {
+	animation-name: hamer;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+
+span:hover {
+
+}
+
+@keyframes hamer {
+	0% {
+
+		transform: translateY(0%);
+	}
+	10% {
+
+		transform: translateX(-1em)
+		           rotate(-180deg)
+		           translateY(1em);
+	}
+	20% {
+
+		transform: translateX(-2em)
+		rotate(-360deg)
+		translateY(-1em);
+
+	}
+	30% {
+
+		transform: translateX(-3em)
+		rotate(0deg)
+		translateY(0em);
+
+	}
+	40% {
+
+		transform: translateX(-3em)
+		rotate(0deg)
+		translateY(0em);
+
+	}
+	50% {
+
+		transform: translateX(-2.5em)
+		rotate(20deg)
+		translateY(0em);
+
+	}
+	60% {
+
+		transform: translateX(-3em)
+		rotate(0deg)
+		translateY(0em);
+	}
+	100%{
+		transform: translateY(0%);
+	}
 }
