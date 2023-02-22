@@ -77,7 +77,7 @@ span {
 	position:relative;
 }
 
-span::after {
+span:first-of-type::after {
 	content:"";
 	position:absolute;
 	background-color:red;
@@ -86,11 +86,16 @@ span::after {
 	width: 1em;
 	left:-.65em;
 	top:0.16em;
-
-
 }
 
-h1:hover span {
+
+h1:hover {
+	animation-name: praxis;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+h1:hover span:first-of-type {
 	animation-name: hamer;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;
@@ -100,6 +105,18 @@ h1:hover span {
 span:hover {
 
 }
+
+
+@keyframes praxis {
+	0% {
+
+	}
+
+	100% {
+
+	}
+}
+
 
 @keyframes hamer {
 	0% {
@@ -129,21 +146,39 @@ span:hover {
 	40% {
 
 		transform: translateX(-3em)
-		rotate(0deg)
+		rotate(-10deg)
 		translateY(0em);
 
 	}
-	50% {
+	45% {
 
 		transform: translateX(-2.5em)
 		rotate(20deg)
 		translateY(0em);
 
 	}
+	50% {
+
+		transform: translateX(-3em)
+		rotate(-10deg)
+		translateY(0em);
+	}
+	55% {
+
+		transform: translateX(-2.5em)
+		rotate(20deg)
+		translateY(0em);
+	}
 	60% {
 
 		transform: translateX(-3em)
-		rotate(0deg)
+		rotate(-10deg)
+		translateY(0em);
+	}
+	65% {
+
+		transform: translateX(-2.5em)
+		rotate(20deg)
 		translateY(0em);
 	}
 	100%{
