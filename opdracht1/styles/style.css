@@ -11,6 +11,8 @@
 
 }
 
+
+
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -33,8 +35,19 @@ button:not[disabled], summary {
 	/* startje */
 	--color-text:#f9d839;
 	--color-hamer:red;
+	--background-color:white;
+	--font-fam:'eenfont';
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* startje */
+		--background-color:black;
+		--color-text:red;
+		--color-hamer:#f9d839;
+	}
+
+}
 
 
 
@@ -43,9 +56,9 @@ button:not[disabled], summary {
 /* JOUW STYLING */
 /****************/
 body {
-  font-family:eenfont, sans-serif;
+  font-family:var(--font-fam);
   color:var(--color-text);
-  background-color:var(--color-background);
+  background-color:var(--background-color);
 }
 
 /* jouw code */
@@ -60,11 +73,6 @@ h1 {
 	font-size:6em;
 	position:relative;
 }
-
-h1::before {
-
-}
-
 
 h1,
 span {
@@ -102,34 +110,22 @@ h1:hover span:nth-child(2) {
 		transform:
 				translateX(0%)
 	}
-	10% {
-
-
-	}
-	20% {
-
-
-	}
-	30% {
-
-	}
 	40% {
-
-	}
-	69% {
 		transform:
-				scale(0.7 , 1.2);
-
+				translateX(0%)
 	}
-	70% {
+	50% {
 		transform:
-				scale(0.5 , 1.5);
-	}
-	71% {
-		transform:
-				scale(1 , 1);
+				translateX(5%);
 	}
 	60% {
+		transform:
+				translateX(10%);
+	}
+
+	70% {
+		transform:
+				translateX(15%);
 
 	}
 }
