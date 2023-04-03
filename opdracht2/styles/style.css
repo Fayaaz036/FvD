@@ -1,36 +1,3 @@
-/* CSS Document */
-
-/*********/
-/* FONTS */
-/*********/
-@font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-
-}
-
-
-
-
-
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-button:not[disabled], summary {
-	cursor: pointer;
-}
-
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -38,20 +5,72 @@ button:not[disabled], summary {
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+	--etiket:#006abe;
+	--naam:#FFF;
+
 }
-
-
-
-
-
 /****************/
-/* JOUW STYLING */
 /****************/
+
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-text);
-  background-color:var(--color-background);
+	font-family:eenfont, sans-serif;
+	color:var(--color-text);
+	background-color:var(--color-background);
 }
 
 /* jouw code */
+/* CSS Document */
+
+/* FONTS */
+/*********/
+/**************/
+@font-face {
+	font-family: 'eenfont';
+	src: url('../fonts/eenfont.woff2') format('woff2'),
+			 url('../fonts/eenfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'pepsi';
+	src: url('../fonts/PEPSI_pl.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+*, *::after, *::before {
+  box-sizing:border-box;
+}
+button:not[disabled], summary {
+	cursor: pointer;
+}
+
+
+
+
+section:nth-of-type(2){
+	background: url("/images/pepsifles.png") no-repeat;
+	height:31em;
+	display:flex;
+
+}
+section:nth-of-type(2) > article:nth-of-type(2){
+	height:9.7em;
+	width:7em;
+	background-color:var(--etiket);
+	margin-left:10em;
+	margin-top:13em;
+}
+section:nth-of-type(2) > article:nth-of-type(2) > img {
+	width:7em;
+	display: block;
+	margin: 1em auto -1em;
+
+}
+
+section:nth-of-type(2) > article:nth-of-type(2) > h2 {
+	font-size: 1.5em;
+	color:var(--naam);
+	font-family: pepsi, sans-serif ;
+	text-align:center;
+}
 
