@@ -14,52 +14,51 @@
 
 <body>
 <main>
-
-
 	<h1>Stel je fles samen</h1>
+
 	<section><!-- navigatie opties -->
 		<article>
-			<p>Kies een etiketkleur</p>
+			<h2>Kies een dopkleur</h2>
 			<ul>
-				<li><button id="btnblauw" onclick="changeEtiket('var(--blauw)')">Blauw</button></li>
-				<li><button id="btnrood" onclick="changeEtiket('var(--rood)')">Rood</button></li>
-				<li><button id="btngeel" onclick="changeEtiket('var(--geel)')">Geel</button></li>
-				<li><button id="btngroen" onclick="changeEtiket('var(--groen)')">Groen</button></li>
+				<li><button id="btnblauw" onclick="changeDop('var(--blauw)')"></button></li>
+				<li><button id="btnrood" onclick="changeDop('var(--rood)')"></button></li>
+				<li><button id="btnpaars" onclick=changeDop('var(--paars)')></button></li>
+				<li><button id="btngroen" onclick="changeDop('var(--groen)')"></button></li>
 			</ul>
-		</article>
-		<article>
-			<p>Kies een dopkleur</p>
+			<h2>Kies een etiketkleur</h2>
 			<ul>
-				<li><button id="btnblauw" onclick="changeDop('var(--blauw)')">Blauw</button></li>
-				<li><button id="btnrood" onclick="changeDop('var(--rood)')">Rood</button></li>
-				<li><button id="btngeel" onclick=changeDop('var(--geel)')>Geel</button></li>
-				<li><button id="btngroen" onclick="changeDop('var(--groen)')">Groen</button></li>
+				<li><button id="btnblauw" onclick="changeEtiket('var(--blauw)')"></button></li>
+				<li><button id="btnrood" onclick="changeEtiket('var(--rood)')"></button></li>
+				<li><button id="btnpaars" onclick="changeEtiket('var(--paars)')"></button></li>
+				<li><button id="btngroen" onclick="changeEtiket('var(--groen)')"></button></li>
 			</ul>
-		</article>
-	</section>
-		<article>
-			<p>Vul je naam in</p>
+			<h2>Personaliseer je naam</h2>
 			<form class="NaamCustom">
 				<label>
-					<input type="text" name="NaamCustom" class="NaamCustom">
+					<input type="text" name="NaamCustom" class="NaamCustom" placeholder="Vul hier je naam in">
 				</label>
 				<button type="submit" value="Submit">Aanpassen</button>
 			</form>
-
 		</article>
+	</section>
 
 
 	<section> <!--Fles -->
-		<article class="Dop">
-		</article>
+		<img src="images/pepsifles.png" alt="pepsifles">
 
-		<article class="Etiket">
-			<img src="images/pepsilogo.png" alt="Pepsi">
-			<h2 class="naam">Pepsi</h2>
-		</article>
+		<section>
+			<article class="Dop">
+			</article>
+			<article class="Etiket">
+				<img class="logopepsi" src="images/pepsilogo.png" alt="Pepsi">
+				<h2 class="naam">Pepsi</h2>
+			</article>
+		</section>
 	</section>
-	<script defer src="scripts/script.js"></script>
+
+	<button id="delete" onClick="window.location.reload()"><span>&#x1F6AE;</span></button>
+
 </main>
 </body>
-	
+<script defer src="scripts/script.js"></script>
 </html>

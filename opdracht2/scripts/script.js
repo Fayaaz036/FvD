@@ -18,3 +18,21 @@ function changeEtiket(color){
 function changeDop(color){
     document.querySelector('.Dop').style.backgroundColor = color;
 }
+var kleuren = ["var(--blauw)","var(--rood)","var(--paars)","var(--groen)"];
+
+
+function color() {
+    
+}
+
+window.addEventListener('keydown', e =>{
+    if (e.key === "r" ){
+        changeEtiket("var(--rood)");
+    }if (e.key === "b" ){
+        changeEtiket("var(--blauw)");
+    }if (e.key === "g" ){
+        changeEtiket("var(--groen)");
+    }if (e.key === "p" ){
+        changeEtiket("var(--paars)");
+    }
+})

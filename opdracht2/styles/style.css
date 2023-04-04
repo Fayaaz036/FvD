@@ -4,25 +4,32 @@
 :root {
 	/* startje */
 	--color-text:#111;
-	--color-background:#eee;
+	--color-background:#006abe;
 	--etiket:#006abe;
 	--naam:#FFF;
-	--etiketkleur:#fff;
+	--wit:#fff;
 
 	/*aangemaakte kleuren voor de etiket en de dop
 	 */
 	--blauw: #006abe;
-	--geel: #e6ac00;
+	--paars: #ff1fff;
 	--groen: #9ec200;
 	--rood: #ff4d4d;
+
+	/*aangemaakte kleuren voor de buttons
+	 */
+	--btnblauwact:#004680;
+	--btnroodact:#b80000;
+	--btnpaarsact:#850085;
+	--btngroenact:#6c8500;
 
 }
 /****************/
 /****************/
 
 body {
-	font-family:eenfont, sans-serif;
-	color:var(--color-text);
+	font-family:pepsi, sans-serif;
+	color:var(--wit);
 	background-color:var(--color-background);
 }
 
@@ -50,25 +57,47 @@ button:not[disabled], summary {
 	cursor: pointer;
 }
 
+section:nth-of-type(1) > article:nth-of-type(1) > h2 {
+	font-size: 1.5em;
+	color:var(--naam);
+	font-family: pepsi, sans-serif ;
+	margin-left:15%;
 
+}
 
-/*Fles achtergrond
+section:nth-of-type(1){
+	margin-left:20%;
+	text-align: center;
 
+}
+
+/*section van de fles
  */
-section:nth-of-type(2){
-	background: url("../images/pepsifles.png") no-repeat;
-	height:31em;
-	margin: auto;
+section:nth-of-type(2) > section{
+	margin-top:-20em;
+	margin-left: -0.01em;
+}
+section:nth-of-type(2) > img {
+	/*background: url("../images/pepsifles.png") no-repeat;*/
+	/*height:31em;*/
+	/*width:100%;*/
+	margin-top: 3em;
+}
 
+/**/
+h1 {
+	text-align: center;!important;
+	margin-left: 30%;
 }
 .Etiket{
 	height:10.2em;
 	width:7.6em;
 	background-color:var(--blauw);
 	margin-left:11.8em;
-	margin-top:10.6em;
-	/*border-radius: 0 0 20%/100px 0;*/
-	box-shadow: inset -0.3em 0.3em  20px  white;
+	margin-top:1.3em;
+	box-shadow: inset -0.2em 0.2em  30px  whitesmoke;
+	position: absolute;
+	border-radius: 0.3em;
 
 }
 
@@ -77,21 +106,25 @@ section:nth-of-type(2){
 	width:4em;
 	height:2.8em;
 	margin-left: 13.6em;
-	margin-top:1em;
+	margin-top:-11.5em;
 	border: transparent;
 	border-radius: 1em 1em 0 0;
 	box-shadow: inset -0.1em 0.3em  12px  white;
+	position: absolute;
+
 
 }
-section:nth-of-type(2) > article:nth-of-type(2) > img {
+/*pepsilogo
+ */
+section:nth-of-type(2) section > article:nth-of-type(2) > img {
 	width:7em;
 	display: block;
 	margin: -0.5em auto -1em;
 	padding-top:1em
-
 }
-
-section:nth-of-type(2) > article:nth-of-type(2) > h2 {
+/*flestext
+ */
+section:nth-of-type(2) section > article:nth-of-type(2) > h2 {
 	font-size: 1.5em;
 	color:var(--naam);
 	font-family: pepsi, sans-serif ;
@@ -101,20 +134,76 @@ section:nth-of-type(2) > article:nth-of-type(2) > h2 {
 ul {
 	list-style: none;
 	display:flex;
-	margin:1em;
+	/*margin:1em;*/
+
 }
-button {
-	margin:0.5em;
+section:nth-of-type(1) > article:nth-of-type(1) > ul >li > button {
+	margin-right:0.5em;
+	height:5em;
+	width:5em;
+	border: var(--wit) solid 2px;
+	border-radius: 100%;
 }
+
+input {
+	font-size:1em;
+	background-color: var(--blauw);
+	border: white solid 2px;
+	color:white;
+	height:2em;
+
+}
+input::placeholder {
+	color:white;
+}
+button[type=submit] {
+	font-size:1em;
+	background-color: var(--rood);
+	border: white solid 2px;
+	color:white;
+	height:2em;
+	width:6em;
+}
+button[type=submit]:active {
+	font-size:1em;
+	background-color: var(--btnroodact);
+}
+
 #btnrood {
 	background-color:var(--rood);
 }
-#btngeel {
-	background-color:var(--geel);
+#btnrood:active {
+	background-color: var(--btnroodact);
 }
+
+#btnpaars {
+	background-color:var(--paars);
+}
+#btnpaars:active {
+	background-color: var(--btnpaarsact);
+}
+
 #btnblauw {
 	background-color:var(--blauw);
 }
+#btnblauw:active {
+	background-color: var(--btnblauwact);
+}
+
+
 #btngroen {
 	background-color:var(--groen);
 }
+#btngroen:active {
+	background-color: var(--btngroenact);
+}
+#delete {
+	position: fixed;
+	margin-top:15em;
+	background-color: transparent;
+	border: none;
+}
+span {
+	font-size:100px;
+}
+
