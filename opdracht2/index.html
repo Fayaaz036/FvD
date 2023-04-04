@@ -21,12 +21,22 @@
 		<article>
 			<p>Kies een etiketkleur</p>
 			<ul>
-				<li><button id="etiket-blauw">Blauw</button></li>
-				<li><button id="etiket-groen">Groen</button></li>
-				<li><button id="etiket-geel">Geel</button></li>
-				<li><button id="etiket-rood">Rood</button></li>
+				<li><button id="btnblauw" onclick="changeEtiket('var(--blauw)')">Blauw</button></li>
+				<li><button id="btnrood" onclick="changeEtiket('var(--rood)')">Rood</button></li>
+				<li><button id="btngeel" onclick="changeEtiket('var(--geel)')">Geel</button></li>
+				<li><button id="btngroen" onclick="changeEtiket('var(--groen)')">Groen</button></li>
 			</ul>
 		</article>
+		<article>
+			<p>Kies een dopkleur</p>
+			<ul>
+				<li><button id="btnblauw" onclick="changeDop('var(--blauw)')">Blauw</button></li>
+				<li><button id="btnrood" onclick="changeDop('var(--rood)')">Rood</button></li>
+				<li><button id="btngeel" onclick=changeDop('var(--geel)')>Geel</button></li>
+				<li><button id="btngroen" onclick="changeDop('var(--groen)')">Groen</button></li>
+			</ul>
+		</article>
+	</section>
 		<article>
 			<p>Vul je naam in</p>
 			<form class="NaamCustom">
@@ -37,16 +47,13 @@
 			</form>
 
 		</article>
-		<article>
-			<p>Kies een dopkleur</p>
-			<p>Button rechts</p>
-		</article>
-	</section>
+
 
 	<section> <!--Fles -->
-		<article>Dop</article>
-		<article>
+		<article class="Dop">
+		</article>
 
+		<article class="Etiket">
 			<img src="images/pepsilogo.png" alt="Pepsi">
 			<h2 class="naam">Pepsi</h2>
 		</article>

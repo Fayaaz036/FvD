@@ -7,6 +7,14 @@
 	--color-background:#eee;
 	--etiket:#006abe;
 	--naam:#FFF;
+	--etiketkleur:#fff;
+
+	/*aangemaakte kleuren voor de etiket en de dop
+	 */
+	--blauw: #006abe;
+	--geel: #e6ac00;
+	--groen: #9ec200;
+	--rood: #ff4d4d;
 
 }
 /****************/
@@ -18,8 +26,6 @@ body {
 	background-color:var(--color-background);
 }
 
-/* jouw code */
-/* CSS Document */
 
 /* FONTS */
 /*********/
@@ -46,24 +52,42 @@ button:not[disabled], summary {
 
 
 
+/*Fles achtergrond
 
+ */
 section:nth-of-type(2){
-	background: url("/images/pepsifles.png") no-repeat;
+	background: url("../images/pepsifles.png") no-repeat;
 	height:31em;
-	display:flex;
+	margin: auto;
 
 }
-section:nth-of-type(2) > article:nth-of-type(2){
-	height:9.7em;
-	width:7em;
-	background-color:var(--etiket);
-	margin-left:10em;
-	margin-top:13em;
+.Etiket{
+	height:10.2em;
+	width:7.6em;
+	background-color:var(--blauw);
+	margin-left:11.8em;
+	margin-top:10.6em;
+	/*border-radius: 0 0 20%/100px 0;*/
+	box-shadow: inset -0.3em 0.3em  20px  white;
+
+}
+
+.Dop{
+	background-color:var(--blauw);
+	width:4em;
+	height:2.8em;
+	margin-left: 13.6em;
+	margin-top:1em;
+	border: transparent;
+	border-radius: 1em 1em 0 0;
+	box-shadow: inset -0.1em 0.3em  12px  white;
+
 }
 section:nth-of-type(2) > article:nth-of-type(2) > img {
 	width:7em;
 	display: block;
-	margin: 1em auto -1em;
+	margin: -0.5em auto -1em;
+	padding-top:1em
 
 }
 
@@ -74,3 +98,23 @@ section:nth-of-type(2) > article:nth-of-type(2) > h2 {
 	text-align:center;
 }
 
+ul {
+	list-style: none;
+	display:flex;
+	margin:1em;
+}
+button {
+	margin:0.5em;
+}
+#btnrood {
+	background-color:var(--rood);
+}
+#btngeel {
+	background-color:var(--geel);
+}
+#btnblauw {
+	background-color:var(--blauw);
+}
+#btngroen {
+	background-color:var(--groen);
+}

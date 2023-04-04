@@ -15,7 +15,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Bronnenlijst
   1. Sanne
-  2. 
+  2. https://css-tricks.com/almanac/selectors/a/after-and-before/
   3. -...-
 
 
@@ -59,13 +59,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
 
+</details>
 
 
 
 ## Opdracht 2 plan
 
 <details>
-  <summary>uitwerken na schetsen idee (voor week 5)</summary>
+  <summary>Voor opdracht 2 ga ik aan de slag met een Pepsi fles configurator. Hierbij 
+kan je verschillende dingen aan de fles aanpassen om het je eigen te maken. </summary>
 
 
   ### Je ontwerp:
@@ -92,8 +94,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-
+Bij een lege naam word er niks weergeven 
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
 
@@ -132,4 +133,4 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Korte omschrijving met plaatje(s)
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
-</details></details>
+</details>
