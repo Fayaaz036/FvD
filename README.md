@@ -16,7 +16,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Bronnenlijst
   1. Sanne
   2. https://css-tricks.com/almanac/selectors/a/after-and-before/
-  3. -...-
+  3. https://css-tricks.com/snippets/css/css-box-shadow/
+  4. https://www.youtube.com/watch?v=UywDkxwpFKk
 
 
 
@@ -76,7 +77,7 @@ kan je verschillende dingen aan de fles aanpassen om het je eigen te maken. </su
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
+  - Javascript DOM 
   - punt 2
   - nog een punt
   - ...
