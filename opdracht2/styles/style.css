@@ -7,7 +7,7 @@
 	--color-background:#006abe;
 	--etiket:#006abe;
 	--naam:#FFF;
-	--wit:#fff;
+	--text:#fff;
 
 	/*aangemaakte kleuren voor de etiket en de dop
 	 */
@@ -24,12 +24,22 @@
 	--btngroenact:#6c8500;
 
 }
+
+@media (prefers-color-scheme: dark){
+	:root{
+		--color-background:#000;
+		--naam:grey;
+	}
+	input[type=text]{
+		background-color: var(--color-background);
+	}
+
+}
 /****************/
 /****************/
 
 body {
 	font-family:pepsi, sans-serif;
-	color:var(--wit);
 	background-color:var(--color-background);
 }
 
@@ -37,13 +47,6 @@ body {
 /* FONTS */
 /*********/
 /**************/
-@font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
 @font-face {
 	font-family: 'pepsi';
 	src: url('../fonts/PEPSI_pl.ttf');
@@ -57,6 +60,7 @@ button:not[disabled], summary {
 	cursor: pointer;
 }
 
+
 section:nth-of-type(1) > article:nth-of-type(1) > h2 {
 	font-size: 1.5em;
 	color:var(--naam);
@@ -66,7 +70,7 @@ section:nth-of-type(1) > article:nth-of-type(1) > h2 {
 }
 
 section:nth-of-type(1){
-	margin-left:20%;
+	margin-left:8%;
 	text-align: center;
 
 }
@@ -126,7 +130,7 @@ section:nth-of-type(2) section > article:nth-of-type(2) > img {
  */
 section:nth-of-type(2) section > article:nth-of-type(2) > h2 {
 	font-size: 1.5em;
-	color:var(--naam);
+	color:var(--text);
 	font-family: pepsi, sans-serif ;
 	text-align:center;
 }
@@ -141,8 +145,19 @@ section:nth-of-type(1) > article:nth-of-type(1) > ul >li > button {
 	margin-right:0.5em;
 	height:5em;
 	width:5em;
-	border: var(--wit) solid 2px;
+	border: var(--text) solid 2px;
 	border-radius: 100%;
+}
+input[type=color]{
+	margin-right:0.5em;
+	height:5em;
+	width:5em;
+	border: var(--text) solid 2px;
+	border-radius: 100%;
+}
+#color-picker {
+	border-radius: 100%;
+
 }
 
 input {
@@ -203,7 +218,21 @@ button[type=submit]:active {
 	background-color: transparent;
 	border: none;
 }
+#download {
+	position: fixed;
+	margin-top:5em;
+	background-color: transparent;
+	border: none;
+}
 span {
 	font-size:100px;
 }
 
+#capture {
+	background-color: var(--color-background);
+}
+canvas {
+	margin-top: 20em;
+	width:200px;!important;
+	height:200px;!important;
+}

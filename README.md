@@ -18,6 +18,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. https://css-tricks.com/almanac/selectors/a/after-and-before/
   3. https://css-tricks.com/snippets/css/css-box-shadow/
   4. https://www.youtube.com/watch?v=UywDkxwpFKk
+5. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color
 
 
 

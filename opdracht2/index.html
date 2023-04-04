@@ -8,22 +8,27 @@
 	
 	<title>Opdracht 2: Interactie galore - Frontend voor Designers</title>
 	
-	<link href="styles/style.css" rel="stylesheet">
+	<link href="./styles/style.css" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 
 <body>
 <main>
-	<h1>Stel je fles samen</h1>
 
 	<section><!-- navigatie opties -->
+
 		<article>
+			<h2>Stel je fles samen</h2>
+
 			<h2>Kies een dopkleur</h2>
 			<ul>
 				<li><button id="btnblauw" onclick="changeDop('var(--blauw)')"></button></li>
 				<li><button id="btnrood" onclick="changeDop('var(--rood)')"></button></li>
 				<li><button id="btnpaars" onclick=changeDop('var(--paars)')></button></li>
 				<li><button id="btngroen" onclick="changeDop('var(--groen)')"></button></li>
+				<li><input type="color" value="#ff0000" id="color-picker" /></li>
+
+
 			</ul>
 			<h2>Kies een etiketkleur</h2>
 			<ul>
@@ -31,11 +36,12 @@
 				<li><button id="btnrood" onclick="changeEtiket('var(--rood)')"></button></li>
 				<li><button id="btnpaars" onclick="changeEtiket('var(--paars)')"></button></li>
 				<li><button id="btngroen" onclick="changeEtiket('var(--groen)')"></button></li>
+				<li><input type="color" value="#ff0000" id="color-picker1" /></li>
 			</ul>
 			<h2>Personaliseer je naam</h2>
 			<form class="NaamCustom">
 				<label>
-					<input type="text" name="NaamCustom" class="NaamCustom" placeholder="Vul hier je naam in">
+					<input type="text" name="NaamCustom" class="NaamCustom" placeholder="Vul hier je naam in" required>
 				</label>
 				<button type="submit" value="Submit">Aanpassen</button>
 			</form>
@@ -43,9 +49,8 @@
 	</section>
 
 
-	<section> <!--Fles -->
+	<section id="capture" style=url(src="../scripts/script.js")> <!--Fles -->
 		<img src="images/pepsifles.png" alt="pepsifles">
-
 		<section>
 			<article class="Dop">
 			</article>
@@ -56,9 +61,17 @@
 		</section>
 	</section>
 
+<!--	<div id="capture" style="padding: 10px; background: var(&#45;&#45;groen)">-->
+<!--		<h2 style="color: #000; ">Hello world!</h2>-->
+<!--	</div>-->
+
 	<button id="delete" onClick="window.location.reload()"><span>&#x1F6AE;</span></button>
+	<button id="download" ><span>&#128190;</span></button>
+
 
 </main>
 </body>
+<script defer src="scripts/html2canvas.min.js"></script>
 <script defer src="scripts/script.js"></script>
+
 </html>
