@@ -13,6 +13,7 @@ form.addEventListener("submit", (event) => {
 
 function changeEtiket(color){
     document.querySelector('.Etiket').style.backgroundColor = color;
+    
 }
 function changeDop(color){
     document.querySelector('.Dop').style.backgroundColor = color;
@@ -41,6 +42,7 @@ window.addEventListener('keydown', e =>{
 /*kleurenpicker
 
  */
+//hier maakt hij de standaard variabelen aan als beginwaarden.
 let colorPicker;
 const defaultColor = "#1FFFC7";
 
@@ -49,6 +51,7 @@ const defaultColor1 = "#1FFFC7";
 
 window.addEventListener("load", startup, false);
 
+//hier starten de functies om de waardes aan te horen vanuit de input
 function startup() {
     colorPicker = document.querySelector("#color-picker");
     colorPicker.value = defaultColor;
@@ -60,6 +63,7 @@ function startup() {
     colorPicker1.addEventListener("input", customEtiket, false);
     colorPicker1.select();
 }
+//hier maakt hij de functie aan waarbij je de kleur veranders van de dop
 
 function customDop(event) {
     const d = document.querySelector(".Dop");
@@ -68,6 +72,7 @@ function customDop(event) {
     }
 }
 
+//hier maakt hij de functie aan waarbij je de kleur veranders van de Etiket
 function customEtiket(event) {
     const e = document.querySelector(".Etiket");
     if (e) {

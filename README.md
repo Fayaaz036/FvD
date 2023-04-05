@@ -19,6 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   3. https://css-tricks.com/snippets/css/css-box-shadow/
   4. https://www.youtube.com/watch?v=UywDkxwpFKk
 5. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color
+6. https://www.youtube.com/watch?v=zmJV6VN2h2E html2canvas
 
 
 
@@ -72,15 +73,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 kan je verschillende dingen aan de fles aanpassen om het je eigen te maken. </summary>
 
 
-  ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
-
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - Javascript DOM 
-  - punt 2
-  - nog een punt
+  - Javascript opkrikken en meer begrijpen 
+  - Coole functies implementeren
+  - 
   - ...
 </details>
 
@@ -91,27 +89,20 @@ kan je verschillende dingen aan de fles aanpassen om het je eigen te maken. </su
 <details>
   <summary>uitwerken na testen (week 7)</summary>
 
-  Neem minimaal 5 bevindingen op:
-
+Helaas heb ik niet getest met een klasgenoot. En heb ik zelf wel problemen gevonden die ik zelf niet op kon lossen. hieroder zie je welke dat zijn.
 
 
   ### Bevinding 1:
-Bij een lege naam word er niks weergeven 
+De test van de naam gaat buiten de etiket
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
 
-
+  <img src="readme-images/error1.png" width="205" alt="ontwerp opdracht 2">
+ 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-
+Bij een lege input van de naam komt er een lege ruimte te staan i.p.v pepsi zoals de begin state. 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
-
-  ### Bevinding 3:
-  ...
+    <input type="text" name="NaamCustom" class="NaamCustom" placeholder="Vul hier je naam in" required>
 </details>
 
 
@@ -122,17 +113,64 @@ Bij een lege naam word er niks weergeven
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/customlight.png" width="393" alt="uitkomst opdracht 2">
+  <img src="readme-images/customdark.png" width="391" alt="uitkomst opdracht 2">
+ 
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+Ik heb geleerd om met Javascript een screenshot te maken met behulp van Canvas.
 
+        document.getElementById('download').onclick = function (){
+        const screenshotTarget = document.getElementById('capture');
+            html2canvas(screenshotTarget).then((canvas)=>{
+                const base64image = canvas.toDataURL("image/png")
+                var anchor = document.createElement('a');
+                var Pepsinaam = document.querySelector("input[type=text]").value;
+                anchor.setAttribute("href",base64image);
+                anchor.setAttribute("download", Pepsinaam + "'s Pepsifles" );
+                anchor.click();
+                anchor.remove();
+            })
+        }
+
+Ik heb ook geleerd hoe je met Javascript een colorinput linkt met het veranderen van de kleur van de dop of etiket. 
+
+    let colorPicker;
+    const defaultColor = "#1FFFC7";
+    let colorPicker1;
+    const defaultColor1 = "#1FFFC7";
+    
+    window.addEventListener("load", startup, false);
+    
+    function startup() {
+    colorPicker = document.querySelector("#color-picker");
+    colorPicker.value = defaultColor;
+    colorPicker.addEventListener("input", customDop, false);
+    colorPicker.select();
+
+    colorPicker1 = document.querySelector("#color-picker1");
+    colorPicker1.value = defaultColor1;
+    colorPicker1.addEventListener("input", customEtiket, false);
+    colorPicker1.select();
+    }
+
+    function customDop(event) {
+    const d = document.querySelector(".Dop");
+    if (d) {
+    d.style.backgroundColor = event.target.value;
+    }
+    }
+    
+    function customEtiket(event) {
+    const e = document.querySelector(".Etiket");
+    if (e) {
+    e.style.backgroundColor = event.target.value;
+    }
+    }
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+Er zijn geen specifieke problemen die ik had, behavle Responsive maken. Omdat de fles zelf een foto is, en de etiket en dop gevormde divjes zijn, kreeg ik de responsiveness niet voorelkaar. 
 </details>

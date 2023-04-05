@@ -203,6 +203,8 @@ button[type=submit]:active {
 }
 #btnblauw:active {
 	background-color: var(--btnblauwact);
+
+
 }
 
 
@@ -217,6 +219,13 @@ button[type=submit]:active {
 	margin-top:15em;
 	background-color: transparent;
 	border: none;
+
+
+}
+#delete:active {
+	/*animation-name: hamer;*/
+	/*animation-duration: 5s;*/
+
 }
 #download {
 	position: fixed;
