@@ -11,18 +11,40 @@ form.addEventListener("submit", (event) => {
     }
 })
 
+
+
+const dopButtons = document.querySelectorAll(".capButtons button");
+const etiketButtons = document.querySelectorAll(".etiketButtons button");
+
+
+dopButtons.forEach(dopButton => {
+    dopButton.addEventListener("click", e => {
+        const newCapColor = e.currentTarget.value;
+        const theCap = document.querySelector(".Dop");
+        theCap.style.setProperty("background-color", newCapColor);
+    });
+});
+etiketButtons.forEach(etiketButtons => {
+    etiketButtons.addEventListener("click", e => {
+        const newEtiColor = e.currentTarget.value;
+        const theEti = document.querySelector(".Etiket");
+        theEti.style.setProperty("background-color", newEtiColor);
+    });
+});
+
+
+
+/*veranderen van de kleur  met arrow toetsen
+ */
 function changeEtiket(color){
     document.querySelector('.Etiket').style.backgroundColor = color;
-    
 }
 function changeDop(color){
     document.querySelector('.Dop').style.backgroundColor = color;
 }
 
-/*veranderen van de kleur  met arrow toetsen
- */
-var kleurenEtiket = ["var(--blauw)","var(--rood)","var(--paars)","var(--groen)"];
-var kleurenDop = ["var(--blauw)","var(--rood)","var(--paars)","var(--groen)"];
+const kleurenEtiket = ["var(--blauw)", "var(--rood)", "var(--paars)", "var(--groen)"];
+const kleurenDop = ["var(--blauw)", "var(--rood)", "var(--paars)", "var(--groen)"];
 
 i = 0;
 j = 0;
@@ -44,7 +66,7 @@ window.addEventListener('keydown', e =>{
  */
 //hier maakt hij de standaard variabelen aan als beginwaarden.
 let colorPicker;
-const defaultColor = "#1FFFC7";
+const defaultColor = "transparant";
 
 let colorPicker1;
 const defaultColor1 = "#1FFFC7";
@@ -68,7 +90,9 @@ function startup() {
 function customDop(event) {
     const d = document.querySelector(".Dop");
     if (d) {
-        d.style.backgroundColor = event.target.value;
+        // d.style.backgroundColor = event.target.value;
+        d.style.setProperty("background-color", event.target.value);
+
     }
 }
 
@@ -88,17 +112,24 @@ document.getElementById('download').onclick = function (){
     html2canvas(screenshotTarget).then((canvas)=>{
         
         const base64image = canvas.toDataURL("image/png")
-        var anchor = document.createElement('a');
-        var Pepsinaam = document.querySelector("input[type=text]").value;
+        const anchor = document.createElement('a');
+        const Pepsinaam = document.querySelector("input[type=text]").value;
 
         anchor.setAttribute("href",base64image);
         anchor.setAttribute("download", Pepsinaam + "'s Pepsifles" );
         anchor.click();
         anchor.remove();
 
-
     })
 }
+
+const refreshButton = document.querySelector('#delete');
+
+const refreshPage = () => {
+    location.reload();
+}
+
+refreshButton.addEventListener('click', refreshPage)
 
 
 
