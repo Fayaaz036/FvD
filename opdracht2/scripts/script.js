@@ -1,16 +1,15 @@
 // JavaScript Document
-var form = document.querySelector (".NaamCustom");
+var form = document.querySelector(".NaamCustom");
 form.addEventListener("submit", (event) => {
     var Pepsinaam = document.querySelector("input[type=text]").value;
     event.preventDefault();
-    if (form.input === ""){
-        document.querySelector('.naam').textContent =  "Pepsi";
-    }else {
-        document.querySelector('.naam').textContent =  Pepsinaam;
+    if (form.input === "") {
+        document.querySelector('.naam').textContent = "Pepsi";
+    } else {
+        document.querySelector('.naam').textContent = Pepsinaam;
 
     }
 })
-
 
 
 const dopButtons = document.querySelectorAll(".capButtons button");
@@ -33,13 +32,13 @@ etiketButtons.forEach(etiketButtons => {
 });
 
 
-
 /*veranderen van de kleur  met arrow toetsen
  */
-function changeEtiket(color){
+function changeEtiket(color) {
     document.querySelector('.Etiket').style.backgroundColor = color;
 }
-function changeDop(color){
+
+function changeDop(color) {
     document.querySelector('.Dop').style.backgroundColor = color;
 }
 
@@ -48,14 +47,17 @@ const kleurenDop = ["var(--blauw)", "var(--rood)", "var(--paars)", "var(--groen)
 
 i = 0;
 j = 0;
-window.addEventListener('keydown', e =>{
-    if (e.key === "ArrowUp" ){
+window.addEventListener('keydown', e => {
+    if (e.key === "ArrowUp") {
         changeEtiket(kleurenEtiket[++i]);
-    }if (e.key === "ArrowDown" ){
+    }
+    if (e.key === "ArrowDown") {
         changeEtiket(kleurenEtiket[--i]);
-    }if (e.key === "ArrowRight" ){
+    }
+    if (e.key === "ArrowRight") {
         changeDop(kleurenDop[++j]);
-    }if (e.key === "ArrowLeft" ){
+    }
+    if (e.key === "ArrowLeft") {
         changeDop(kleurenDop[--j]);
     }
 });
@@ -85,6 +87,7 @@ function startup() {
     colorPicker1.addEventListener("input", customEtiket, false);
     colorPicker1.select();
 }
+
 //hier maakt hij de functie aan waarbij je de kleur veranders van de dop
 
 function customDop(event) {
@@ -103,20 +106,21 @@ function customEtiket(event) {
         e.style.backgroundColor = event.target.value;
     }
 }
+
 /* Screenshot feature
  */
 
-document.getElementById('download').onclick = function (){
+document.getElementById('download').onclick = function () {
     const screenshotTarget = document.getElementById('capture');
-    
-    html2canvas(screenshotTarget).then((canvas)=>{
-        
+
+    html2canvas(screenshotTarget).then((canvas) => {
+
         const base64image = canvas.toDataURL("image/png")
         const anchor = document.createElement('a');
         const Pepsinaam = document.querySelector("input[type=text]").value;
 
-        anchor.setAttribute("href",base64image);
-        anchor.setAttribute("download", Pepsinaam + "'s Pepsifles" );
+        anchor.setAttribute("href", base64image);
+        anchor.setAttribute("download", Pepsinaam + "'s Pepsifles");
         anchor.click();
         anchor.remove();
 

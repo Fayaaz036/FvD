@@ -2,63 +2,68 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#006abe;
-	--etiket:#000;
-	--naam:#b80000;
-	--text:white;
+    /* startje */
+    --color-text: #111;
+    --color-background: #006abe;
+    --etiket: #000;
+    --naam: #b80000;
+    --text: white;
 
-	/*aangemaakte kleuren voor de etiket en de dop
-	 */
-	--blauw: #006abe;
-	--paars: #ff1fff;
-	--groen: #9ec200;
-	--rood: #ff4d4d;
+    /*aangemaakte kleuren voor de etiket en de dop
+     */
+    --blauw: #006abe;
+    --paars: #ff1fff;
+    --groen: #9ec200;
+    --rood: #ff4d4d;
 
-	/*aangemaakte kleuren voor de buttons
-	 */
-	--btnblauwact:#004680;
-	--btnroodact:#b80000;
-	--btnpaarsact:#850085;
-	--btngroenact:#6c8500;
-
-}
-
-@media (prefers-color-scheme: dark){
-	:root{
-		--color-background:#000;
-		--text:grey;
-	}
-	input[type=text]{
-		background-color: var(--color-background);
-	}
+    /*aangemaakte kleuren voor de buttons
+     */
+    --btnblauwact: #004680;
+    --btnroodact: #b80000;
+    --btnpaarsact: #850085;
+    --btngroenact: #6c8500;
 
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #000;
+        --text: grey;
+    }
 
-@media screen and (min-width:65em) {
-	main {
-		display:grid;
-		grid-template-areas: 'controls fles';
-		flex-direction: column;
-		align-items: center;
-		margin-top: 10em;
-	}
-#capture{
-	background-color:transparent;
-	scale: 130%;
-}
-
-
+    input[type=text] {
+        background-color: var(--color-background);
+    }
 
 }
+
+
+@media screen and (min-width: 65em) {
+    main {
+        display: grid;
+        grid-template-areas: 'controls fles';
+        align-items: center;
+        margin-top: 10em;
+    }
+
+    #capture {
+        background-color: transparent;
+        scale: 150%;
+        /*font-size:clamp(2em, 8vmin, 5em);*/
+    }
+
+    main > section:nth-of-type(2) > img {
+        /*width:45em;*/
+    }
+
+}
+
 /****************/
 /****************/
 
 body {
-	font-family:pepsi, sans-serif;
-	background-color:var(--color-background);
+    font-family: pepsi, sans-serif;
+    background-color: var(--color-background);
 }
 
 
@@ -66,197 +71,216 @@ body {
 /*********/
 /**************/
 @font-face {
-	font-family: 'pepsi';
-	src: url('../fonts/PEPSI_pl.ttf');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'pepsi';
+    src: url('../fonts/PEPSI_pl.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
+
 *, *::after, *::before {
-  box-sizing:border-box;
+    box-sizing: border-box;
 }
+
 button:not[disabled], summary {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 /**/
 
 main > section:nth-of-type(1) {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	grid-area: controls;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    grid-area: controls;
 }
+
 section:nth-of-type(1) > article:nth-of-type(1) > h2 {
-	font-size: 1.5em;
-	color:var(--naam);
-	font-family: pepsi, sans-serif ;
+    font-size: 1.5em;
+    color: var(--naam);
+    font-family: pepsi, sans-serif;
 }
 
 /*section van de fles
  */
 
 #capture {
-	position: relative;
-	/*background-color: var(--color-background);*/
-	padding-top:3em;
-	display: flex;
-	justify-content: center;
-	font-size:clamp(.6em, 3vmin, 1em);
+    position: relative;
+    /*background-color: var(--color-background);*/
+    padding-top: 3em;
+    display: flex;
+    justify-content: center;
+    font-size: clamp(.6em, 3vmin, 1em);
 }
+
 section:nth-of-type(2) {
-	grid-area: fles;
+    grid-area: fles;
 }
+
 section:nth-of-type(2) > img {
-	width:31.25em;
+    width: 31.25em;
 }
+
 /* etiket en dop */
 section:nth-of-type(2) > section {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap:10em;
-}
-.Dop{
-	background-color: var(--etiket);
-	width:4em;
-	height:2.8em;
-	border: transparent;
-	border-radius: 1em 1em 0 0;
-	box-shadow: inset -0.1em 0.3em .75em  white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10em;
 }
 
-.Etiket{
-	height:10.2em;
-	width:7.6em;
-	background-color:var(--etiket);
-	box-shadow: inset -0.2em 0.2em 1.875em  whitesmoke;
-	border-radius: 0.3em;
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	top: 12.6em;
+.Dop {
+    background-color: var(--etiket);
+    width: 4em;
+    height: 2.8em;
+    border: transparent;
+    border-radius: 1em 1em 0 0;
+    box-shadow: inset -0.1em 0.3em .75em white;
+}
 
+.Etiket {
+    height: 10.2em;
+    width: 7.6em;
+    background-color: var(--etiket);
+    box-shadow: inset -0.2em 0.2em 1.875em whitesmoke;
+    border-radius: 0.3em;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 12.6em;
 }
 
 /*pepsilogo
  */
 section:nth-of-type(2) section > article:nth-of-type(2) > img {
-	width:7em;
-	/*display: block;*/
-	/*margin: -0.5em auto -1em;*/
-	padding-top:1em
+    width: 7em;
+    /*display: block;*/
+    /*margin: -0.5em auto -1em;*/
+    padding-top: 1em
 }
+
 /*flestext
  */
 section:nth-of-type(2) section > article:nth-of-type(2) > h2 {
-	font-size: 1.5em;
-	color:var(--naam);
-	font-family: pepsi, sans-serif ;
-	text-align:center;
+    font-size: 1.5em;
+    color: var(--naam);
+    font-family: pepsi, sans-serif;
+    text-align: center;
 }
 
 ul {
-	list-style: none;
-	display:flex;
-	/*margin:1em;*/
+    list-style: none;
+    display: flex;
+    /*margin:1em;*/
 
 }
-section:nth-of-type(1) > article:nth-of-type(1) > ul >li > button {
-	margin-right:0.5em;
-	height:5em;
-	width:5em;
-	border: var(--text) solid 2px;
-	border-radius: 100%;
+
+section:nth-of-type(1) > article:nth-of-type(1) > ul > li > button {
+    margin-right: 0.5em;
+    height: 5em;
+    width: 5em;
+    border: var(--text) solid 2px;
+    border-radius: 100%;
 }
-input[type=color]{
-	margin-right:0.5em;
-	height:5em;
-	width:5em;
-	border: var(--text) solid 2px;
-	border-radius: 100%;
+
+input[type=color] {
+    margin-right: 0.5em;
+    height: 5em;
+    width: 5em;
+    border: var(--text) solid 2px;
+    border-radius: 100%;
 }
+
 #color-picker {
-	border-radius: 100%;
+    border-radius: 100%;
 
 }
 
 input {
-	font-size:1em;
-	background-color: var(--blauw);
-	border: white solid 2px;
-	color:white;
-	height:2em;
+    font-size: 1em;
+    background-color: var(--blauw);
+    border: white solid 2px;
+    color: white;
+    height: 2em;
 
 }
+
 input::placeholder {
-	color:white;
+    color: white;
 }
+
 button[type=submit] {
-	font-size:1em;
-	background-color: var(--rood);
-	border: white solid 2px;
-	color:white;
-	height:2em;
-	width:6em;
+    font-size: 1em;
+    background-color: var(--rood);
+    border: white solid 2px;
+    color: white;
+    height: 2em;
+    width: 6em;
 }
+
 button[type=submit]:active {
-	font-size:1em;
-	background-color: var(--btnroodact);
+    font-size: 1em;
+    background-color: var(--btnroodact);
 }
 
 #btnrood {
-	background-color:var(--rood);
+    background-color: var(--rood);
 }
+
 #btnrood:active {
-	background-color: var(--btnroodact);
+    background-color: var(--btnroodact);
 }
 
 #btnpaars {
-	background-color:var(--paars);
+    background-color: var(--paars);
 }
+
 #btnpaars:active {
-	background-color: var(--btnpaarsact);
+    background-color: var(--btnpaarsact);
 }
 
 #btnblauw {
-	background-color:var(--blauw);
+    background-color: var(--blauw);
 }
+
 #btnblauw:active {
-	background-color: var(--btnblauwact);
+    background-color: var(--btnblauwact);
 
 
 }
-
 
 #btngroen {
-	background-color:var(--groen);
+    background-color: var(--groen);
 }
+
 #btngroen:active {
-	background-color: var(--btngroenact);
+    background-color: var(--btngroenact);
 }
+
 #delete {
-	position: fixed;
-	background-color: transparent;
-	border: none;
-	bottom: 5em;
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    bottom: 5em;
 }
 
 #download {
-	position: fixed;
-	background-color: transparent;
-	border: none;
-	bottom: 15em;
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    bottom: 13em;
 
 }
+
 span {
-	font-size:100px;
+    font-size: 100px;
 }
-
 
 canvas {
-	margin-top: 20em;
-	width:200px;!important;
-	height:200px;!important;
+    margin-top: 20em;
+    width: 200px;
+!important;
+    height: 200px;
+!important;
 }
