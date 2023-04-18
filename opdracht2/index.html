@@ -16,29 +16,38 @@
 <main>
 	<section><!-- navigatie opties -->
 		<article>
-			<h2>Kies een dopkleur</h2>
-			<ul class="capButtons">
-				<li><button id="btnblauw" value="var(--blauw)" aria-label="ik wil een blauwe dop"></button></li>
-				<li><button id="btnrood" value="var(--rood)" aria-label="ik wil een rode dop"></button></li>
-				<li><button id="btnpaars" value="var(--paars)" aria-label="ik wil een paarse dop"></button></li>
-				<li><button id="btngroen" value="var(--groen)" aria-label="ik wil een groene dop"></button></li>
-				<li><input type="color" value="" id="color-picker" /></li>
-			</ul>
-			<h2>Kies een etiketkleur</h2>
-			<ul class="etiketButtons">
-				<li><button id="btnblauw" value="var(--blauw)" aria-label="ik wil een blauwe etiket"></button></li>
-				<li><button id="btnrood" value="var(--rood)" aria-label="ik wil een rode etiket"></button></li>
-				<li><button id="btnpaars" value="var(--paars)" aria-label="ik wil een paarse etiket"></button></li>
-				<li><button id="btngroen" value="var(--groen)" aria-label="ik wil een groene etiket"></button></li>
-				<li><input type="color" value="#ff0000" id="color-picker1" /></li>
-			</ul>
-			<h2>Personaliseer je naam</h2>
-			<form class="NaamCustom">
-				<label>
-					<input type="text" name="NaamCustom" class="NaamCustom" placeholder="vul je naam in (max 8)" required maxlength="7">
-				</label>
-				<button type="submit" value="Submit">Aanpassen</button>
-			</form>
+			<div>
+				<h2>Kies een dopkleur</h2>
+				<button aria-expanded="true">Dicht</button>
+				<ul class="capButtons" >
+					<li><button id="btnblauw" value="var(--blauw)" aria-label="ik wil een blauwe dop"></button></li>
+					<li><button id="btnrood" value="var(--rood)" aria-label="ik wil een rode dop"></button></li>
+					<li><button id="btnpaars" value="var(--paars)" aria-label="ik wil een paarse dop"></button></li>
+					<li><button id="btngroen" value="var(--groen)" aria-label="ik wil een groene dop"></button></li>
+					<li><input type="color" value="" id="color-picker" /></li>
+				</ul>
+			</div>
+			<div>
+				<h2>Kies een etiketkleur</h2>
+				<button aria-expanded="false">Open</button>
+				<ul class="etiketButtons">
+					<li><button id="btnblauw" value="var(--blauw)" aria-label="ik wil een blauwe etiket"></button></li>
+					<li><button id="btnrood" value="var(--rood)" aria-label="ik wil een rode etiket"></button></li>
+					<li><button id="btnpaars" value="var(--paars)" aria-label="ik wil een paarse etiket"></button></li>
+					<li><button id="btngroen" value="var(--groen)" aria-label="ik wil een groene etiket"></button></li>
+					<li><input type="color" value="#ff0000" id="color-picker1" /></li>
+				</ul>
+			</div>
+			<div>
+				<h2>Personaliseer je naam</h2>
+				<button aria-expanded="false">Open</button>
+				<form class="NaamCustom">
+					<label>
+						<input type="text" name="NaamCustom" class="NaamCustom" placeholder="vul je naam in (max 8)" required maxlength="7">
+					</label>
+					<button type="submit" value="Submit">Aanpassen</button>
+				</form>
+			</div>
 		</article>
 	</section>
 
@@ -55,8 +64,8 @@
 		</section>
 	</section>
 	
-	<button id="delete"><span>&#x1F6AE;</span></button>
-	<button id="download" ><span>&#128190;</span></button>
+	<button id="delete" class="rareButton">&#x1F6AE;</button>
+	<button id="download" class="rareButton">&#128190;</button>
 	
 </main>
 </body>

@@ -11,6 +11,28 @@ form.addEventListener("submit", (event) => {
     }
 })
 
+const areaButtons = document.querySelectorAll("section:nth-of-type(1) > article:nth-of-type(1) > div > button");
+const areaHtwees = document.querySelectorAll("section:nth-of-type(1) > article:nth-of-type(1) > div > h2");
+
+areaButtons.forEach(areaButton => {
+    areaButton.addEventListener("click", toggleControls)
+})
+areaHtwees.forEach(Htwee => {
+    Htwee.addEventListener("click", toggleControls)
+})
+
+function toggleControls(event){
+    const deParent = event.target.closest("div");
+
+    const deButton = deParent.querySelector("button");
+
+    const currentButton = document.querySelector("button[aria-expanded='true']")
+    currentButton.ariaExpanded= false;
+    deButton.ariaExpanded=true;
+}
+
+
+
 
 const dopButtons = document.querySelectorAll(".capButtons button");
 const etiketButtons = document.querySelectorAll(".etiketButtons button");
